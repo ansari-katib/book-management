@@ -1,0 +1,26 @@
+{
+  "1751524667538": {
+    "id": "1751524667538",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "publishYear": 1960,
+    "userId": "user2"
+  },
+  "1751524698227": {
+    "id": "1751524698227",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "publishYear": 1959,
+    "userId": "user3"
+  },
+  "1751524708419": {
+    "id": "1751524708419",
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "genre": "Drama",
+    "publishYear": 1939,
+    "userId": "user4"
+  }
+}
