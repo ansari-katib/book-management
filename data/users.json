@@ -1,8 +1,10 @@
 {
-  "ansarikatib647@gmail.com": {
-    "password": "12345"
+  "1751623788708": {
+    "email": "ansarikatib647@gmail.com",
+    "password": "$2b$10$XFEQMXHzx0QFMoQmgEgCke1lrNJJE0Ybm.1TMicfzGQnY0gsxAxoO"
   },
-  "naruto@gmail.com": {
-    "password": "$2b$10$XR7/drXLCKjkJUsgp3WPqO1.oZ0JW45rfyeYdH6yyWRZqwOXoDkRG"
+  "1751623921631": {
+    "email": "testuser@example.com",
+    "password": "$2b$10$fQWAt0GuH2uZgkAfBxATK.d.f8mSGMpeh5IBAu8iFy29PYs8bsgv6"
   }
 }

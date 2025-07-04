@@ -2,8 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 
-import authRoute from './routes/authRoutes.js';
-import bookRoute from './routes/booksRoute.js'; 
+import authRoute from './routes/authRoute.js';
+import bookRoute from './routes/bookRoutes.js'; 
 
 dotenv.config();
 
@@ -23,3 +23,5 @@ app.use('/api/books', bookRoute);  // protected book CRUD
 app.listen(PORT, () => {
   console.log(`server is running on http://localhost:${PORT}`);
 });
+
+export default app ;
