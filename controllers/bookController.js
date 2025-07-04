@@ -85,3 +85,31 @@ export async function search(req, res) {
     res.status(500).json({ error: 'Search failed' });
   }
 }
+
+
+// pagination apo : 
+
+export async function paginate(req, res) {
+  try {
+    let { page = 1, limit = 10 } = req.query;
+    page = parseInt(page);
+    limit = parseInt(limit);
+
+    const books = await getAllBooks(); // get all books
+
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+
+    const paginatedBooks = books.slice(startIndex, endIndex);
+
+    res.json({
+      message: 'Books fetched with pagination',
+      page,
+      limit,
+      total: books.length,
+      data: paginatedBooks
+    });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to paginate books' });
+  }
+}
