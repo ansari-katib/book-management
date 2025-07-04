@@ -51,3 +51,14 @@ export async function deleteBook(id) {
   await writeBooks(books);
   return true;
 }
+
+//  search book model  :
+
+export async function searchBooks(query) {
+  const books = await getAllBooks(); // assuming this fetches all books
+  const q = query.toLowerCase();
+  return books.filter(book =>
+    book.title.toLowerCase().includes(q) ||
+    book.author?.toLowerCase().includes(q)
+  );
+}

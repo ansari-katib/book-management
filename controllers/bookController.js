@@ -3,7 +3,8 @@ import {
   getBookById,
   createBook,
   updateBook,
-  deleteBook
+  deleteBook,
+  searchBooks
 } from '../models/bookModel.js';
 
 export async function getAll(req, res) {
@@ -64,5 +65,23 @@ export async function remove(req, res) {
     res.status(200).json({ message: 'Book deleted successfully' });
   } catch (err) {
     res.status(500).json({ error: 'Failed to delete book' });
+  }
+}
+
+
+// search api  : 
+
+export async function search(req, res) {
+  try {
+    const { q } = req.query;
+    if (!q) return res.status(400).json({ error: 'Missing search query' });
+
+    const results = await searchBooks(q);
+    res.json({
+      message: 'Search successful',
+      data: results
+    });
+  } catch (err) {
+    res.status(500).json({ error: 'Search failed' });
   }
 }
