@@ -73,10 +73,10 @@ export async function remove(req, res) {
 
 export async function search(req, res) {
   try {
-    const { q } = req.query;
-    if (!q) return res.status(400).json({ error: 'Missing search query' });
+    const { genre } = req.query;
+    if (!genre) return res.status(400).json({ error: 'Missing search query' });
 
-    const results = await searchBooks(q);
+    const results = await searchBooks(genre);
     res.json({
       message: 'Search successful',
       data: results
