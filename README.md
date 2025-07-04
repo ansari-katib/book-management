@@ -13,6 +13,10 @@ This project uses **file-based storage** (JSON files) instead of a database and 
 - Protected book routes accessible only by authenticated users
 - File-based data storage using `fs/promises`
 - MVC architecture (Model-View-Controller) for clean code organization
+- Search books by title or author
+- Pagination support for book listing
+- Jest + Supertest-based unit and integration testing
+
 
 ---
 
@@ -25,6 +29,7 @@ This project uses **file-based storage** (JSON files) instead of a database and 
 - File system (`fs/promises`) for data persistence
 - dotenv for environment variables
 - CORS middleware
+- Jest & Supertest
 
 ---
 
@@ -48,15 +53,20 @@ This project uses **file-based storage** (JSON files) instead of a database and 
 
 ## Book Routes (Protected - require JWT token)
 
-| Method | Endpoint          | Description                  |
-|--------|-------------------|------------------------------|
-| GET    | /api/books        | Get all books                |
-| GET    | /api/books/:id    | Get book by ID               |
-| POST   | /api/books        | Create a new book            |
-| PUT    | /api/books/:id    | Update book by ID            |
-| DELETE | /api/books/:id    | Delete book by ID            |
-
+| Method | Endpoint            | Description                  |
+|--------|---------------------|------------------------------|
+| GET    | /api/books          | Get all books                |
+| GET    | /api/books/:id      | Get book by ID               |
+| POST   | /api/books          | Create a new book            |
+| PUT    | /api/books/:id      | Update book by ID            |
+| DELETE | /api/books/:id      | Delete book by ID            |
+| GET    | /api/books/search   | search the book by genre     |
+| GET    | /api/books/paginate | Pagination support for book
 ---
+
+- search api =  eg : http://localhost:5005/api/books/search?genre=fiction
+
+- pagination api = eg :  http://localhost:5005/api/books/paginate?page=1&limit=1
 
 ### Notes:
 
