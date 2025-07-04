@@ -32,8 +32,8 @@ This project uses **file-based storage** (JSON files) instead of a database and 
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/book-management-api.git
-   cd book-management-api
+   git clone https://github.com/ansari-katib/book-management.git
+   cd book-management
 
 # API Routes
 
