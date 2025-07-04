@@ -39,6 +39,8 @@ This project uses **file-based storage** (JSON files) instead of a database and 
    ```bash
    git clone https://github.com/ansari-katib/book-management.git
    cd book-management
+   npm install
+   npm start
 
 # API Routes
 
